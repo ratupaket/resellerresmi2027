@@ -4,7 +4,11 @@ import Card from "../Card/Card";
 import Modal from "../Modal/Modal";
 import { menuList } from "../../../utils/MenuList";
 
-const categories = ["Agen RPL", "Agen Firli", "Agen Ayu", "Agen Nina", "Agen Wulan", "Agen Efi Nurlatifah", "Agen Susan", "Agen Sheila", "Agen Rahayu", "Agen Adhilla", "Agen Rika Ferika", "Agen Mike", "Agen Nunung", "Non Agen"];
+const categories = [
+  "Agen RPL", "Agen Firli", "Agen Ayu", "Agen Nina", "Agen Wulan", 
+  "Agen Efi Nurlatifah", "Agen Susan", "Agen Sheila", "Agen Rahayu", 
+  "Agen Adhilla", "Agen Rika Ferika", "Agen Mike", "Agen Nunung", "Non Agen"
+];
 
 const Menu = ({ addToCart, onCardClick }) => {
   const [selectedCategory, setSelectedCategory] = useState("Agen RPL");
@@ -12,14 +16,11 @@ const Menu = ({ addToCart, onCardClick }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
 
-  const filteredMenuList =
-    selectedCategory === "Semua"
-      ? menuList
-      : menuList.filter((menu) => menu?.category === selectedCategory);
-
-  const searchedMenuList = filteredMenuList.filter((menu) =>
-    menu?.title?.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const searchedMenuList = menuList.filter((menu) => {
+    const isCategoryMatch = menu?.category === selectedCategory;
+    const isSearchMatch = menu?.title?.toLowerCase().includes(searchTerm.toLowerCase());
+    return searchTerm ? (isCategoryMatch && isSearchMatch) : isCategoryMatch;
+  });
 
   const handleCardClick = (menu) => {
     setSelectedMenu(menu);
@@ -64,19 +65,16 @@ const Menu = ({ addToCart, onCardClick }) => {
 
       <section className="mt-10 mb-16 px-4 md:px-6">
         
-        {/* JUDUL NYALA */}
         <div className="text-center">
           <h1 className="m-glow-title text-4xl md:text-5xl font-rocksalt font-bold">
             Daftar Reseller
           </h1>
         </div>
 
-        {/* SUBTITLE */}
         <h2 className="text-base md:text-lg font-londrina font-bold tracking-wider text-white text-center mt-4 mb-6">
           Silahkan cari sesuai nama asli & grup
         </h2>
 
-        {/* SEARCH BAR */}
         <div className="flex justify-center w-full max-w-xl mx-auto mb-6">
           <div className="relative w-full flex rounded-xl overflow-hidden border-2 border-white/30 focus-within:border-amber-400 transition-colors duration-300">
             <div className="flex items-center pl-4 text-white/50">
@@ -93,18 +91,20 @@ const Menu = ({ addToCart, onCardClick }) => {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
 
-            <button className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 md:px-8 whitespace-nowrap transition-colors duration-300">
-              Cari
+            <button 
+              onClick={() => setSearchTerm("")}
+              className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 md:px-8 whitespace-nowrap transition-colors duration-300"
+            >
+              {searchTerm ? "Reset" : "Cari"}
             </button>
           </div>
         </div>
 
-        {/* CATEGORIES FILTER (SEMUA NAMA KELIATAN, RAPI KE BAWAH) */}
         <div className="w-full mb-8">
           <div className="flex flex-wrap justify-center gap-2 md:gap-2.5">
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <button
-                key={index}
+                key={category}
                 onClick={() => {
                   setSelectedCategory(category);
                   setSearchTerm("");
@@ -121,11 +121,14 @@ const Menu = ({ addToCart, onCardClick }) => {
           </div>
         </div>
 
-        {/* CARD GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 tablet:grid-cols-5 lg:grid-cols-6 gap-4 mt-2">
+        {/* PERHATIKAN BAGIAN INI: SAYA TAMBAHKAN key={selectedCategory} */}
+        <div key={selectedCategory} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 tablet:grid-cols-5 lg:grid-cols-6 gap-4 mt-2">
           {searchedMenuList.length > 0 ? (
-            searchedMenuList.map((menu) => (
-              <Card key={menu?.id || Math.random()} onClick={() => handleCardClick(menu)}>
+            searchedMenuList.map((menu, index) => (
+              <Card 
+                key={menu?.id || `menu-${index}-${menu?.title}`}
+                onClick={() => handleCardClick(menu)}
+              >
                 <Card.Top image={menu?.image} title={menu?.title} desc={menu?.desc} />
                 <Card.Bottom price={menu?.price} />
               </Card>
@@ -148,7 +151,6 @@ const Menu = ({ addToCart, onCardClick }) => {
           )}
         </div>
 
-        {/* MODAL */}
         <AnimatePresence>
           {showModal && selectedMenu && (
             <Modal
