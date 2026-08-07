@@ -1,0 +1,68 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: "#DC2626",
+        secondary: "#E5E5E5",
+        tertiary: "#db2525",
+      },
+      fontFamily: {
+        rocksalt: ["Rock Salt", "sans-serif"],
+        londrina: ["Londrina Solid", "sans-serif"],
+        londrinaShadow: ["Londrina Shadow", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+      textShadow: {
+        sm: '0 1px 2px var()',
+        md: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)',
+      },
+      fontSize: {
+        "2xs": ".625rem",
+        "3.25xs": "13px",
+        0: "0.60rem",
+        0.5: "0.625rem",
+        1: "0.75rem",
+        2: "0.9rem",
+        10: "0.625rem",
+        11: "0.6875rem",
+        12: "0.75rem",
+        14: "0.875rem",
+        15: "0,9rem",
+        20: "1.25rem",
+        24: "1.5rem",
+        28: "1.75rem",
+        32: "2rem",
+        36: "2.25rem",
+        40: "3rem",
+      },
+      screens: {
+        xxs: "320px",
+        xs: "390px",
+        xs2: "400px",
+        xsm: "480px",
+        mobile: "580px",
+        sm: "640px",
+        smm: "700px",
+        md: "770px",
+        "2md": "840px",
+        tablet: "960px",
+        lg: "1120px",
+        xl: "1200px",
+        "xxl": "1300px",
+        "3xl": "1440px",
+      },
+      animation: {
+        "spin-slower": "spin 2s linear infinite",
+        "spin-slow": "spin 1.5s linear infinite",
+        "spin-fast": "spin 0.75s linear infinite",
+      },
+    },
+  },
+  plugins: [],
+}
