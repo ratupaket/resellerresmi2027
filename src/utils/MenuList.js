@@ -1473,7 +1473,7 @@ export const menuList = [
     {
       id: 187,
       image: "/images/user2.png",
-      title: "Ulfi Amelia Ulfa",
+      title: "Ulfi Amelia Ulfah",
       desc: "Reseller Sub Agen 1 Neneng Sub Agen 2 Melanea Agustine",
       price: "Ciampel Karawang",
       category: "Non Agen",
@@ -1489,7 +1489,7 @@ export const menuList = [
     {
       id: 189,
       image: "/images/user2.png",
-      title: "Titin Aryani",
+      title: "Titin Ariyani",
       desc: "Reseller Sub Agen 1 Neneng Sub Agen 2 Melanea Agustine",
       price: "Rengas Dengklok Karawang",
       category: "Non Agen",
