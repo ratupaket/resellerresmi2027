@@ -1465,7 +1465,7 @@ export const menuList = [
     {
       id: 186,
       image: "/images/user2.png",
-      title: "Melanea Agustine",
+      title: "Melania Agustine",
       desc: "Reseller Sub Agen 1 Neneng Sub Agen 2 Melanea Agustine",
       price: "Ciampel Karawang",
       category: "Non Agen",
@@ -23946,7 +23946,7 @@ export const menuList = [
     {
       id: 2970,
       image: "/images/user2.png",
-      title:"Santi Maryati",
+      title:"Santi Maryati"
       desc: "Reseller",
       price: "Munjuljaya Purwakarta",
       category: "Agen Sheila",
