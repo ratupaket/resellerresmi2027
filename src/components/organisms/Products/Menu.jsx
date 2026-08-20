@@ -63,43 +63,41 @@ const Menu = ({ addToCart, onCardClick }) => {
         }
       `}</style>
 
-      <section className="mt-10 mb-16 px-4 md:px-6">
-        
-        <div className="text-center">
-          <h1 className="m-glow-title text-4xl md:text-5xl font-rocksalt font-bold">
-            Daftar Reseller
-          </h1>
-        </div>
+     <section className="mt-10 mb-16 px-4 md:px-6">
+  
+  <div className="text-center">
+    <h1 className="m-glow-title text-4xl md:text-5xl font-rocksalt font-bold">
+      Daftar Reseller
+    </h1>
+  </div>
 
-        <h2 className="text-base md:text-lg font-londrina font-bold tracking-wider text-white text-center mt-4 mb-6">
-          Silahkan cari sesuai nama asli & grup
-        </h2>
+  <h2 className="text-base md:text-lg font-londrina font-bold tracking-wider text-white text-center mt-4 mb-6">
+    Silahkan cari sesuai nama asli & grup
+  </h2>
 
-        <div className="flex justify-center w-full max-w-xl mx-auto mb-6">
-          <div className="relative w-full flex rounded-xl overflow-hidden border-2 border-white/30 focus-within:border-amber-400 transition-colors duration-300">
-            <div className="flex items-center pl-4 text-white/50">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-            
-            <input
-              type="text"
-              className="w-full bg-white/10 placeholder:text-white/60 py-3 pl-3 pr-4 text-white font-medium focus:outline-none"
-              placeholder="Ketik nama reseller di sini..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+  <div className="flex justify-center w-full max-w-xl mx-auto mb-6">
+    <div className="relative w-full flex rounded-xl overflow-hidden border-2 border-white/30 focus-within:border-amber-400 transition-colors duration-300">
+      <div className="flex items-center pl-4 text-white/50">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+      
+      <input
+        type="text"
+        className="w-full bg-white/10 placeholder:text-white/60 py-3 pl-3 pr-4 text-white font-medium focus:outline-none"
+        placeholder="Ketik nama reseller di sini..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
 
-            <button 
-              onClick={() => setSearchTerm("")}
-              className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 md:px-8 whitespace-nowrap transition-colors duration-300"
-            >
-              {searchTerm ? "Reset" : "Cari"}
-            </button>
-          </div>
-        </div>
-
+      <button 
+        className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 md:px-8 whitespace-nowrap transition-colors duration-300"
+      >
+        Cari
+      </button>
+    </div>
+  </div>
         <div className="w-full mb-8">
           <div className="flex flex-wrap justify-center gap-2 md:gap-2.5">
             {categories.map((category) => (
