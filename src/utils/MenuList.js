@@ -61,7 +61,7 @@ export const menuList = [
       id: 9,
       image: "/images/user2.png",
       title: "Susanti",
-      price: "Sukasari Purwakarta
+      price: "Sukasari Purwakarta",
       category: "Agen RPL",
     },
     {
