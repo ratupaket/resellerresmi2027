@@ -81,6 +81,13 @@ export const menuList = [
     {
       id: 12,
       image: "/images/user2.png",
+      title: "Mike Berlina",
+      price: "Jatiluhur Purwakarta",
+      category: "Agen RPL",
+    },
+    { 
+      id: 12,
+      image: "/images/user2.png",
       title: "Dian Nurhayati",
       desc: "Sub Agen I",
       price: "Darangdan Purwakarta",
