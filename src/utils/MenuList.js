@@ -13,7 +13,7 @@ export const menuList = [
     id: 2,
     image: "/images/user2.png",
     title: "Firli Kartika Latis",
-    price: "Ciampel Karawang",
+    price: "Cibungur Purwakarta",
     category: "Agen RPL",
     phone: "0822-1685-3794",
   },
