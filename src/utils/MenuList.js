@@ -25198,9 +25198,17 @@ export const menuList = [
       id: 3122,
       image: "/images/user2.png",
       title:"LINA KARTINI",
-      desc: "Reseller Sub Agen TATI SETIAWATI Sub Agen 2 ONYA",
+      desc: "Reseller Sub Agen 1 TATI SETIAWATI Sub Agen 2 ONYA",
       price: "TANJUNGMEDAR SUMEDANG",
       category: "Agen Rahayu",
+    },
+  {
+      id: 3123,
+      image: "/images/user2.png",
+      title:"SUSANTI",
+      desc: "Reseller Sub Agen 1 NIDA ASHFIA",
+      price: "BANYUSARI KARAWANG",
+      category: "Agen Ayu",
     },
        
        
