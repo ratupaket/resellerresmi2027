@@ -98,7 +98,7 @@ export const menuList = [
     phone: "0838-2212-4672",
   },
   {
-    id: 13,
+    id: 12,
     image: "/images/user2.png",
     title: "Dian Nurhayati",
     desc: "Sub Agen I",
