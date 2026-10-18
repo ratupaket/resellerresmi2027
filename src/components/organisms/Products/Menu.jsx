@@ -23,33 +23,45 @@ const categories = [
   "Non Agen",
 ];
 
-// Link WhatsApp Admin Ratu Paket Lebaran
+// Link WhatsApp admin
 const ADMIN_WHATSAPP =
   "https://wa.me/message/MU23Y7YT6SNFP1";
+
+const ADMIN_MESSAGE =
+  "Halo Admin Ratu Paket Lebaran, saya ingin mengonfirmasi nama reseller yang tidak ditemukan di daftar. Mohon bantu pengecekan data saya. Terima kasih.";
 
 const Menu = ({ addToCart, onCardClick }) => {
   const [selectedCategory, setSelectedCategory] =
     useState("Agen RPL");
 
+  // Input yang sedang diketik
   const [searchTerm, setSearchTerm] = useState("");
+
+  // Kata kunci yang sudah dicari
+  const [submittedSearch, setSubmittedSearch] = useState("");
+
   const [showModal, setShowModal] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
 
-  // Filter nama berdasarkan kategori dan pencarian
+  // Filter reseller berdasarkan kategori dan kata kunci
   const searchedMenuList = menuList.filter((menu) => {
     const isCategoryMatch =
       menu?.category === selectedCategory;
 
     const isSearchMatch = menu?.title
       ?.toLowerCase()
-      .includes(searchTerm.toLowerCase().trim());
+      .includes(submittedSearch.toLowerCase());
 
-    return searchTerm.trim()
-      ? isCategoryMatch && isSearchMatch
-      : isCategoryMatch;
+    return isCategoryMatch && isSearchMatch;
   });
 
-  // Membuka detail reseller
+  // Jalankan pencarian saat tombol Cari ditekan
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setSubmittedSearch(searchTerm.trim());
+  };
+
+  // Pilih reseller untuk melihat detail
   const handleCardClick = (menu) => {
     setSelectedMenu(menu);
     setShowModal(true);
@@ -59,16 +71,19 @@ const Menu = ({ addToCart, onCardClick }) => {
     }
   };
 
-  // Menutup detail reseller
+  // Tutup modal
   const closeModal = () => {
     setShowModal(false);
     setSelectedMenu(null);
   };
 
-  // Membuka WhatsApp admin
+  // Buka WhatsApp admin dengan pesan
   const handleContactAdmin = () => {
+    const whatsappURL =
+      `${ADMIN_WHATSAPP}?text=${encodeURIComponent(ADMIN_MESSAGE)}`;
+
     window.open(
-      ADMIN_WHATSAPP,
+      whatsappURL,
       "_blank",
       "noopener,noreferrer"
     );
@@ -78,13 +93,8 @@ const Menu = ({ addToCart, onCardClick }) => {
     <>
       <style>{`
         @keyframes menuTextShimmer {
-          0% {
-            background-position: -200% center;
-          }
-
-          100% {
-            background-position: 200% center;
-          }
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
         }
 
         .m-glow-title {
@@ -105,47 +115,46 @@ const Menu = ({ addToCart, onCardClick }) => {
           display: inline-block;
           line-height: 1.35;
           padding: 4px 0;
-          transform: translateZ(0);
           -webkit-font-smoothing: antialiased;
         }
 
         .category-button {
+          min-height: 42px;
+          padding: 9px 15px;
+          border: 2px solid #ffffff;
+          border-radius: 10px;
+          background: #ffffff;
+          color: #78350f;
           font-size: 14px;
           font-weight: 800;
-          letter-spacing: 0.3px;
-          text-shadow: none;
-          min-height: 42px;
+          letter-spacing: 0.2px;
+          box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
           transition: all 0.2s ease;
         }
 
-        .category-button:focus-visible {
-          outline: 3px solid #fbbf24;
-          outline-offset: 3px;
+        .category-button:hover {
+          background: #fff1cc;
+          border-color: #f59e0b;
+          transform: translateY(-1px);
         }
 
         .category-button-active {
-          background-color: #fbbf24;
-          color: #241300;
-          border-color: #fbbf24;
-          box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
-        }
-
-        .category-button-inactive {
-          background-color: #31213d;
-          color: #ffffff;
-          border-color: #f3d6ff;
-        }
-
-        .category-button-inactive:hover {
-          background-color: #51315f;
+          background: #fbbf24;
+          color: #422006;
           border-color: #ffffff;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-button:focus-visible {
+          outline: 3px solid #f59e0b;
+          outline-offset: 3px;
         }
 
         @media (max-width: 480px) {
           .category-button {
-            font-size: 12px;
-            padding: 9px 10px;
             min-height: 38px;
+            padding: 8px 10px;
+            font-size: 12px;
           }
         }
 
@@ -162,10 +171,9 @@ const Menu = ({ addToCart, onCardClick }) => {
 
       <section className="mt-6 mb-16 px-4 md:px-6">
 
-        {/* INFORMASI: SELALU TERLIHAT */}
+        {/* INFORMASI SELALU TERLIHAT */}
         <div className="mx-auto mb-7 w-full max-w-4xl">
           <div className="flex items-start gap-3 rounded-xl border-2 border-pink-500 bg-white px-4 py-4 shadow-lg sm:px-5">
-
             <IoInformationCircleOutline
               className="mt-0.5 h-7 w-7 shrink-0 text-pink-700"
               aria-hidden="true"
@@ -178,14 +186,13 @@ const Menu = ({ addToCart, onCardClick }) => {
 
               <p className="text-sm font-semibold leading-relaxed text-gray-900 sm:text-base">
                 Jika nama tidak ditemukan, silakan hubungi
-                Admin Ratu Paket Lebaran untuk verifikasi
-                data.
+                Admin Ratu Paket Lebaran untuk verifikasi data.
               </p>
 
               <button
                 type="button"
                 onClick={handleContactAdmin}
-                className="mt-3 inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-green-700 px-4 py-2 text-sm font-extrabold text-white shadow-md transition-colors hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
+                className="mt-3 inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-extrabold text-white shadow-md transition-colors hover:bg-green-700"
               >
                 <FaWhatsapp
                   className="h-5 w-5"
@@ -208,11 +215,13 @@ const Menu = ({ addToCart, onCardClick }) => {
           Silakan cari berdasarkan nama asli dan grup
         </h2>
 
-        {/* PENCARIAN */}
-        <div className="mx-auto mb-6 flex w-full max-w-xl justify-center">
-          <div className="relative flex w-full overflow-hidden rounded-xl border-2 border-white/50 transition-colors duration-300 focus-within:border-amber-400">
-
-            <div className="flex items-center pl-4 text-white">
+        {/* FORM PENCARIAN */}
+        <form
+          onSubmit={handleSearch}
+          className="mx-auto mb-6 w-full max-w-xl"
+        >
+          <div className="flex w-full overflow-hidden rounded-xl border-2 border-white bg-white shadow-lg focus-within:border-amber-400">
+            <div className="flex items-center pl-4 text-gray-600">
               <svg
                 className="h-5 w-5"
                 fill="none"
@@ -232,8 +241,8 @@ const Menu = ({ addToCart, onCardClick }) => {
             <input
               type="text"
               aria-label="Cari nama reseller"
-              className="w-full bg-[#24182f] py-3 pl-3 pr-4 font-semibold text-white placeholder:text-white/80 focus:outline-none"
-              placeholder="Ketik nama reseller di sini..."
+              className="w-full min-w-0 bg-white py-3 pl-3 pr-2 font-semibold text-gray-900 placeholder:text-gray-500 focus:outline-none"
+              placeholder="Ketik nama reseller..."
               value={searchTerm}
               onChange={(e) =>
                 setSearchTerm(e.target.value)
@@ -241,14 +250,13 @@ const Menu = ({ addToCart, onCardClick }) => {
             />
 
             <button
-              type="button"
-              onClick={() => setSearchTerm("")}
-              className="whitespace-nowrap bg-amber-400 px-5 font-extrabold text-gray-950 transition-colors hover:bg-amber-300 md:px-7"
+              type="submit"
+              className="shrink-0 bg-amber-400 px-5 font-extrabold text-gray-950 transition-colors hover:bg-amber-300 md:px-7"
             >
-              {searchTerm ? "Reset" : "Cari"}
+              Cari
             </button>
           </div>
-        </div>
+        </form>
 
         {/* KATEGORI AGEN */}
         <div className="mb-8 w-full">
@@ -265,11 +273,12 @@ const Menu = ({ addToCart, onCardClick }) => {
                   onClick={() => {
                     setSelectedCategory(category);
                     setSearchTerm("");
+                    setSubmittedSearch("");
                   }}
-                  className={`category-button rounded-lg border-2 px-4 py-2 ${
+                  className={`category-button ${
                     isSelected
                       ? "category-button-active"
-                      : "category-button-inactive"
+                      : ""
                   }`}
                 >
                   {category}
@@ -304,9 +313,8 @@ const Menu = ({ addToCart, onCardClick }) => {
             ))
           ) : (
             <div className="col-span-full flex flex-col items-center justify-center py-16 text-center">
-
               <svg
-                className="mb-4 h-14 w-14 text-white/70"
+                className="mb-4 h-14 w-14 text-white/80"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -332,21 +340,13 @@ const Menu = ({ addToCart, onCardClick }) => {
               <button
                 type="button"
                 onClick={handleContactAdmin}
-                className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-green-700 px-5 py-3 font-extrabold text-white shadow-lg transition-colors hover:bg-green-800"
+                className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-extrabold text-white shadow-lg transition-colors hover:bg-green-700"
               >
                 <FaWhatsapp
                   className="h-5 w-5"
                   aria-hidden="true"
                 />
                 Hubungi Admin via WhatsApp
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setSearchTerm("")}
-                className="mt-4 font-bold text-amber-300 underline underline-offset-4 hover:text-amber-200"
-              >
-                Reset Pencarian
               </button>
             </div>
           )}
