@@ -1,4 +1,4 @@
-       // src/utils/menuList.js
+// src/utils/menuList.js
 
 export const menuList = [
   {
@@ -98,22 +98,13 @@ export const menuList = [
     phone: "0838-2212-4672",
   },
   {
-    id: 12,
+    id: 13,
     image: "/images/user2.png",
     title: "Dian Nurhayati",
     desc: "Sub Agen I",
     price: "Darangdan Purwakarta",
     category: "Non Agen",
   },
-];
-    { 
-      id: 12,
-      image: "/images/user2.png",
-      title: "Dian Nurhayati",
-      desc: "Sub Agen I",
-      price: "Darangdan Purwakarta",
-      category: "Non Agen",
-    },
     {
       id: 13,
       image: "/images/user2.png",
