@@ -97,16 +97,8 @@ export const menuList = [
     category: "Agen RPL",
     phone: "0838-2212-4672",
   },
-  {
-    id: 13,
-    image: "/images/user2.png",
-    title: "Dian Nurhayati",
-    desc: "Sub Agen I",
-    price: "Darangdan Purwakarta",
-    category: "Non Agen",
-  },
     {
-      id: 14,
+      id: 13,
       image: "/images/user2.png",
       title: "Yulandari",
       desc: "Reseller",
@@ -114,7 +106,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 15,
+      id: 14,
       image: "/images/user2.png",
       title: "Hapidoh Nur Saniah",
       desc: "Reseller",
@@ -122,7 +114,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 16,
+      id: 15,
       image: "/images/user2.png",
       title: "Maya Siti Fatimah",
       desc: "Reseller",
@@ -130,7 +122,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 17,
+      id: 16,
       image: "/images/user2.png",
       title: "Rina Marlina",
       desc: "Reseller",
@@ -138,7 +130,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 18,
+      id: 17,
       image: "/images/user2.png",
       title: "Noviyanti Hasibuan",
       desc: "Reseller",
@@ -146,15 +138,15 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 19,
+      id: 18,
       image: "/images/user2.png",
-      title: "Ranni Rachmawati",
+      title: "Ranny Rachmawati",
       desc: "Reseller",
       price: "Setu Bekasi",
       category: "Agen Nina",
     },
     {
-      id: 20,
+      id: 19,
       image: "/images/user2.png",
       title: "Amanda Mardiantini",
       desc: "Reseller",
@@ -162,7 +154,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 21,
+      id: 20,
       image: "/images/user2.png",
       title: "Suci Harini",
       desc: "Reseller",
@@ -170,7 +162,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 22,
+      id: 21,
       image: "/images/user2.png",
       title: "Susilawati",
       desc: "Reseller",
@@ -178,15 +170,15 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 23,
+      id: 22,
       image: "/images/user2.png",
-      title: "Artiaryni",
+      title: "ARTYARINI",
       desc: "Reseller",
       price: "Jatiluhur Purwakarta",
       category: "Agen Nina",
     },
     {
-      id: 24,
+      id: 23,
       image: "/images/user2.png",
       title: "Rita Rosmanawati",
       desc: "Reseller",
@@ -194,7 +186,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 25,
+      id: 24,
       image: "/images/user2.png",
       title: "Ayu Irana",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -202,7 +194,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 26,
+      id: 25,
       image: "/images/user2.png",
       title: "Fitriyani Zakiah Tunisa",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -210,7 +202,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 27,
+      id: 26,
       image: "/images/user2.png",
       title: "Euis Melawati Anggraeni",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -218,7 +210,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 28,
+      id: 27,
       image: "/images/user2.png",
       title: "Rosita",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -226,7 +218,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 29,
+      id: 28,
       image: "/images/user2.png",
       title: "Dedeh Setiawati",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -234,7 +226,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 30,
+      id: 29,
       image: "/images/user2.png",
       title: "Ira Susanti",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -242,7 +234,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 31,
+      id: 30,
       image: "/images/user2.png",
       title: "Iyok Rokoyah",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -250,9 +242,17 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
+      id: 31,
+      image: "/images/user2.png",
+      title: "CUCU  MUNIRAH",
+      desc: "Reseller Sub Agen 1 Yayang",
+      price: "Plered Purwakarta",
+      category: "Agen Nina",
+    },
+    {
       id: 32,
       image: "/images/user2.png",
-      title: "Cucu Munirah",
+      title: "INA MARLINA SOPANDI",
       desc: "Reseller Sub Agen 1 Yayang",
       price: "Plered Purwakarta",
       category: "Agen Nina",
@@ -260,7 +260,7 @@ export const menuList = [
     {
       id: 33,
       image: "/images/user2.png",
-      title: "Ina Marina Sopandi",
+      title: "Dita Nuranggraeni",
       desc: "Reseller Sub Agen 1 Yayang",
       price: "Plered Purwakarta",
       category: "Agen Nina",
@@ -268,21 +268,13 @@ export const menuList = [
     {
       id: 34,
       image: "/images/user2.png",
-      title: "Dita Nuranggraeni",
-      desc: "Reseller Sub Agen 1 Yayang",
-      price: "Plered Purwakarta",
-      category: "Agen Nina",
-    },
-    {
-      id: 35,
-      image: "/images/user2.png",
       title: "Ida Fitriyani",
       desc: "Reseller Sub Agen 1 Yayang",
       price: "Jatiluhur Purwakarta",
       category: "Agen Nina",
     },
     {
-      id: 36,
+      id: 35,
       image: "/images/user2.png",
       title: "Sopiah",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -290,7 +282,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 37,
+      id: 36,
       image: "/images/user2.png",
       title: "Rima Rahmawati Rahayu",
       desc: "Reseller Sub Agen 1 Yayang",
@@ -298,7 +290,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 38,
+      id: 37,
       image: "/images/user2.png",
       title: "Eneng",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -306,7 +298,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 39,
+      id: 38,
       image: "/images/user2.png",
       title: "Neng Teti Nurhayaty",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -314,7 +306,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 40,
+      id: 39,
       image: "/images/user2.png",
       title: "Euis Suhartini",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -322,7 +314,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 41,
+      id: 40,
       image: "/images/user2.png",
       title: "Nur Emiliasari",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -330,7 +322,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 42,
+      id: 41,
       image: "/images/user2.png",
       title: "Ririn Nurhasanah",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -338,15 +330,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 43,
-      image: "/images/user2.png",
-      title: "Eneng",
-      desc: "Reseller Sub Agen 1 Eneng",
-      price: "Tegal Waru Purwakarta",
-      category: "Agen Nina",
-    },
-    {
-      id: 44,
+      id: 42,
       image: "/images/user2.png",
       title: "Rita Pujiasih",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -354,7 +338,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 45,
+      id: 43,
       image: "/images/user2.png",
       title: "Reni Susilawati",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -362,7 +346,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 46,
+      id: 44,
       image: "/images/user2.png",
       title: "Sipa Nurazizah",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -370,7 +354,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 47,
+      id: 45,
       image: "/images/user2.png",
       title: "Winda Maryana",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -378,7 +362,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 48,
+      id: 46,
       image: "/images/user2.png",
       title: "Evi Damayanti",
       desc: "Reseller Sub Agen 1 Eneng",
@@ -386,7 +370,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 49,
+      id: 47,
       image: "/images/user2.png",
       title: "Sri Rahayu",
       desc: "Reseller Sub Agen 1 Sri",
@@ -394,7 +378,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 50,
+      id: 48,
       image: "/images/user2.png",
       title: "Windi Melani",
       desc: "Reseller Sub Agen 1 Sri",
@@ -402,7 +386,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 51,
+      id: 49,
       image: "/images/user2.png",
       title: "Anis Marsela",
       desc: "Reseller Sub Agen 1 Sri",
@@ -410,7 +394,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 51,
+      id: 50,
       image: "/images/user2.png",
       title: "Siti Patimah",
       desc: "Reseller Sub Agen 1 Sri",
@@ -418,9 +402,17 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 52,
+      id: 51,
       image: "/images/user2.png",
       title: "Ujang Nasir",
+      desc: "Reseller Sub Agen 1 Sri",
+      price: "Tegal Waru Purwakarta",
+      category: "Agen Nina",
+    },
+    {
+      id: 52,
+      image: "/images/user2.png",
+      title: "Ipi Sopiah",
       desc: "Reseller Sub Agen 1 Sri",
       price: "Tegal Waru Purwakarta",
       category: "Agen Nina",
@@ -429,20 +421,12 @@ export const menuList = [
       id: 53,
       image: "/images/user2.png",
       title: "Ipi Sopiah",
-      desc: "Reseller Sub Agen 1 Sri",
-      price: "Tegal Waru Purwakarta",
-      category: "Agen Nina",
-    },
-    {
-      id: 54,
-      image: "/images/user2.png",
-      title: "Dedeh Denengsih",
       desc: "Reseller Sub Agen 1 Dedeh",
       price: "Ciampel Karawang",
       category: "Agen Nina",
     },
     {
-      id: 55,
+      id: 54,
       image: "/images/user2.png",
       title: "Shinta Yulianti",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -450,7 +434,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 56,
+      id: 55,
       image: "/images/user2.png",
       title: "Kokom Komala",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -458,7 +442,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 57,
+      id: 56,
       image: "/images/user2.png",
       title: "Dedeh Denengsih",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -466,7 +450,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 58,
+      id: 57,
       image: "/images/user2.png",
       title: "Cahyati",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -474,7 +458,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 59,
+      id: 58,
       image: "/images/user2.png",
       title: "Deviana",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -482,7 +466,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 60,
+      id: 59,
       image: "/images/user2.png",
       title: "Ratna Puspitasari",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -490,15 +474,15 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 61,
+      id: 60,
       image: "/images/user2.png",
-      title: "Sinta Desi Kosmalasari",
+      title: "Sinta Desi Komalasari",
       desc: "Reseller Sub Agen 1 Dedeh",
       price: "Ciampel Karawang",
       category: "Agen Nina",
     },
     {
-      id: 62,
+      id: 61,
       image: "/images/user2.png",
       title: "Kartini",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -506,15 +490,15 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 63,
+      id: 62,
       image: "/images/user2.png",
-      title: "Tami Haryani",
+      title: "TAMI HARYANTI",
       desc: "Reseller Sub Agen 1 Dedeh",
       price: "Ciampel Karawang",
       category: "Agen Nina",
     },
     {
-      id: 64,
+      id: 63,
       image: "/images/user2.png",
       title: "Tari Maripah",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -522,7 +506,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 65,
+      id: 64,
       image: "/images/user2.png",
       title: "Sri Sayekti",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -530,7 +514,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 66,
+      id: 65,
       image: "/images/user2.png",
       title: "Dewi Ratnasari",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -538,7 +522,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 67,
+      id: 66,
       image: "/images/user2.png",
       title: "Mintarsih",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -546,7 +530,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 68,
+      id: 67,
       image: "/images/user2.png",
       title: "Marsih Susilawati",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -554,7 +538,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 69,
+      id: 68,
       image: "/images/user2.png",
       title: "Ela Nurlaelasari",
       desc: "Reseller Sub Agen 1 Dedeh",
@@ -562,7 +546,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 70,
+      id: 69,
       image: "/images/user2.png",
       title: "Lucy Pazrina Sabila",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -570,7 +554,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 71,
+      id: 70,
       image: "/images/user2.png",
       title: "Syiva Nurkasivah",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -578,7 +562,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 72,
+      id: 71,
       image: "/images/user2.png",
       title: "Ida Farida",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -586,7 +570,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 73,
+      id: 72,
       image: "/images/user2.png",
       title: "Neni Nuraeni",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -594,7 +578,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 74,
+      id: 73,
       image: "/images/user2.png",
       title: "Nurul Fitriani",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -602,7 +586,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 75,
+      id: 74,
       image: "/images/user2.png",
       title: "Nofikasari",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -610,7 +594,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 76,
+      id: 75,
       image: "/images/user2.png",
       title: "Rita Nursyamsiah",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -618,7 +602,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 77,
+      id: 76,
       image: "/images/user2.png",
       title: "Susi Sulastri",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -626,7 +610,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 78,
+      id: 77,
       image: "/images/user2.png",
       title: "Maryamah",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -634,15 +618,15 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 79,
+      id: 78,
       image: "/images/user2.png",
-      title: "Aiysah",
+      title: "AISYAH",
       desc: "Reseller Sub Agen 1 Lucy",
       price: "Tegal Waru Purwakarta",
       category: "Agen Nina",
     },
     {
-      id: 80,
+      id: 79,
       image: "/images/user2.png",
       title: "Ajeng Silwa Sakinah",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -650,7 +634,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 81,
+      id: 80,
       image: "/images/user2.png",
       title: "Maya Lastari",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -658,7 +642,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 82,
+      id: 81,
       image: "/images/user2.png",
       title: "Desi Rahmawati",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -666,7 +650,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 83,
+      id: 82,
       image: "/images/user2.png",
       title: "Yuni Sara",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -674,7 +658,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 84,
+      id: 83,
       image: "/images/user2.png",
       title: "Siti Tarwiyah",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -682,7 +666,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 85,
+      id: 84,
       image: "/images/user2.png",
       title: "Yuni Siti Maudi",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -690,7 +674,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 86,
+      id: 85,
       image: "/images/user2.png",
       title: "Risma Afriani",
       desc: "Reseller Sub Agen 1 Lucy",
@@ -698,7 +682,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 87,
+      id: 86,
       image: "/images/user2.png",
       title: "Rini Patimah",
       desc: "Reseller Sub Agen 1 Lucy Sub Agen 2 Rini Patimah",
@@ -706,7 +690,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 88,
+      id: 87,
       image: "/images/user2.png",
       title: "Lia Herlia",
       desc: "Reseller Sub Agen 1 Lucy Sub Agen 2 Rini Patimah",
@@ -714,15 +698,15 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 89,
+      id: 88,
       image: "/images/user2.png",
-      title: "Indri Noviyanti",
+      title: "INDRI NOVIANTI",
       desc: "Reseller Sub Agen 1 Lucy Sub Agen 2 Rini Patimah",
       price: "Sukatani Purwakarta",
       category: "Agen Nina",
     },
     {
-      id: 90,
+      id: 89,
       image: "/images/user2.png",
       title: "Rismawati",
       desc: "Reseller Sub Agen 1 Lucy Sub Agen 2 Rini Patimah",
@@ -730,7 +714,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 91,
+      id: 90,
       image: "/images/user2.png",
       title: "Hety Fatimah",
       desc: "Reseller Sub Agen 1 Lucy Sub Agen 2 Hety Fatimah",
@@ -738,7 +722,7 @@ export const menuList = [
       category: "Agen Nina",
     },
     {
-      id: 92,
+      id: 91,
       image: "/images/user2.png",
       title: "Een",
       desc: "Reseller Sub Agen 1 Lucy Sub Agen 2 Hety Fatimah",
