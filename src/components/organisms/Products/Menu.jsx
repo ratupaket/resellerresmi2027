@@ -60,6 +60,7 @@ const Menu = ({ addToCart, onCardClick }) => {
           0% {
             background-position: -200% center;
           }
+
           100% {
             background-position: 200% center;
           }
@@ -90,25 +91,27 @@ const Menu = ({ addToCart, onCardClick }) => {
 
       <section className="mt-6 mb-16 px-4 md:px-6">
 
-        {/* PENGUMUMAN - SELALU TERLIHAT */}
+        {/* PENGUMUMAN YANG SELALU TERLIHAT */}
         <div className="mx-auto mb-6 w-full max-w-4xl">
-          <div className="flex items-start gap-2 rounded-lg border border-pink-200/50 bg-pink-100/10 px-3 py-2.5 sm:items-center sm:px-4">
+          <div className="flex items-start gap-3 rounded-lg border-2 border-pink-300 bg-white px-4 py-3 shadow-md sm:items-center">
             <IoInformationCircleOutline
-              className="mt-0.5 h-5 w-5 shrink-0 text-pink-300 sm:mt-0"
+              className="mt-0.5 h-6 w-6 shrink-0 text-pink-600 sm:mt-0"
               aria-hidden="true"
             />
 
-            <p className="text-xs leading-relaxed text-white/90 sm:text-sm">
-              <span className="font-bold text-amber-300">
-                Informasi Reseller:
+            <p className="text-sm leading-relaxed text-gray-800 sm:text-base">
+              <span className="font-extrabold text-pink-700">
+                INFORMASI:
               </span>{" "}
-              Jika nama tidak ditemukan, silakan hubungi Admin
-              Ratu Paket Lebaran untuk verifikasi.
+              <span className="font-medium">
+                Jika nama tidak ditemukan, silakan hubungi
+                Admin Ratu Paket Lebaran untuk verifikasi.
+              </span>
             </p>
           </div>
         </div>
 
-        {/* JUDUL */}
+        {/* JUDUL DAFTAR RESELLER */}
         <div className="text-center">
           <h1 className="m-glow-title text-4xl md:text-5xl font-rocksalt font-bold">
             Daftar Reseller
@@ -119,15 +122,17 @@ const Menu = ({ addToCart, onCardClick }) => {
           Silahkan cari sesuai nama asli & grup
         </h2>
 
-        {/* PENCARIAN */}
+        {/* KOLOM PENCARIAN */}
         <div className="flex justify-center w-full max-w-xl mx-auto mb-6">
           <div className="relative w-full flex rounded-xl overflow-hidden border-2 border-white/30 focus-within:border-amber-400 transition-colors duration-300">
-            <div className="flex items-center pl-4 text-white/50">
+
+            <div className="flex items-center pl-4 text-white/70">
               <svg
                 className="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -140,7 +145,7 @@ const Menu = ({ addToCart, onCardClick }) => {
 
             <input
               type="text"
-              className="w-full bg-white/10 placeholder:text-white/60 py-3 pl-3 pr-4 text-white font-medium focus:outline-none"
+              className="w-full bg-white/10 placeholder:text-white/70 py-3 pl-3 pr-4 text-white font-medium focus:outline-none"
               placeholder="Ketik nama reseller di sini..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -179,7 +184,7 @@ const Menu = ({ addToCart, onCardClick }) => {
           </div>
         </div>
 
-        {/* DAFTAR RESELLER */}
+        {/* DAFTAR KARTU RESELLER */}
         <div
           key={selectedCategory}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 tablet:grid-cols-5 lg:grid-cols-6 gap-4 mt-2"
@@ -195,16 +200,18 @@ const Menu = ({ addToCart, onCardClick }) => {
                   title={menu?.title}
                   desc={menu?.desc}
                 />
+
                 <Card.Bottom price={menu?.price} />
               </Card>
             ))
           ) : (
             <div className="col-span-full flex flex-col items-center justify-center py-20">
               <svg
-                className="w-16 h-16 text-white/20 mb-4"
+                className="w-16 h-16 text-white/30 mb-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -214,11 +221,11 @@ const Menu = ({ addToCart, onCardClick }) => {
                 />
               </svg>
 
-              <p className="text-xl font-londrina text-white/60 tracking-wider text-center">
+              <p className="text-xl font-londrina text-white/80 tracking-wider text-center">
                 Nama tidak ditemukan di grup ini.
               </p>
 
-              <p className="mt-2 text-sm text-white/50 text-center">
+              <p className="mt-2 text-sm text-white/80 text-center">
                 Silakan hubungi Admin Ratu Paket Lebaran
                 untuk verifikasi.
               </p>
@@ -226,7 +233,7 @@ const Menu = ({ addToCart, onCardClick }) => {
               <button
                 type="button"
                 onClick={() => setSearchTerm("")}
-                className="mt-4 text-amber-400 font-bold hover:underline"
+                className="mt-4 text-amber-300 font-bold hover:underline"
               >
                 Reset Pencarian
               </button>
@@ -245,6 +252,7 @@ const Menu = ({ addToCart, onCardClick }) => {
             />
           )}
         </AnimatePresence>
+
       </section>
     </>
   );
