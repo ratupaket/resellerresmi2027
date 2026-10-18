@@ -1,6 +1,6 @@
        // src/utils/menuList.js
 
-export const menuList = 
+export const menuList = [
   {
     id: 1,
     image: "/images/user2.png",
@@ -97,6 +97,15 @@ export const menuList =
     category: "Agen RPL",
     phone: "0838-2212-4672",
   },
+  {
+    id: 13,
+    image: "/images/user2.png",
+    title: "Dian Nurhayati",
+    desc: "Sub Agen I",
+    price: "Darangdan Purwakarta",
+    category: "Non Agen",
+  },
+];
     { 
       id: 12,
       image: "/images/user2.png",
