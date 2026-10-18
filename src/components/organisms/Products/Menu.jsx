@@ -1,13 +1,25 @@
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import { IoInformationCircleOutline } from "react-icons/io5";
 import Card from "../Card/Card";
 import Modal from "../Modal/Modal";
 import { menuList } from "../../../utils/MenuList";
 
 const categories = [
-  "Agen RPL", "Agen Firli", "Agen Ayu", "Agen Nina", "Agen Wulan", 
-  "Agen Efi Nurlatifah", "Agen Susan", "Agen Sheila", "Agen Rahayu", 
-  "Agen Adhilla", "Agen Rika Ferika", "Agen Mike", "Agen Nunung", "Non Agen"
+  "Agen RPL",
+  "Agen Firli",
+  "Agen Ayu",
+  "Agen Nina",
+  "Agen Wulan",
+  "Agen Efi Nurlatifah",
+  "Agen Susan",
+  "Agen Sheila",
+  "Agen Rahayu",
+  "Agen Adhilla",
+  "Agen Rika Ferika",
+  "Agen Mike",
+  "Agen Nunung",
+  "Non Agen",
 ];
 
 const Menu = ({ addToCart, onCardClick }) => {
@@ -18,14 +30,22 @@ const Menu = ({ addToCart, onCardClick }) => {
 
   const searchedMenuList = menuList.filter((menu) => {
     const isCategoryMatch = menu?.category === selectedCategory;
-    const isSearchMatch = menu?.title?.toLowerCase().includes(searchTerm.toLowerCase());
-    return searchTerm ? (isCategoryMatch && isSearchMatch) : isCategoryMatch;
+    const isSearchMatch = menu?.title
+      ?.toLowerCase()
+      .includes(searchTerm.toLowerCase());
+
+    return searchTerm
+      ? isCategoryMatch && isSearchMatch
+      : isCategoryMatch;
   });
 
   const handleCardClick = (menu) => {
     setSelectedMenu(menu);
     setShowModal(true);
-    onCardClick(menu);
+
+    if (onCardClick) {
+      onCardClick(menu);
+    }
   };
 
   const closeModal = () => {
@@ -37,9 +57,14 @@ const Menu = ({ addToCart, onCardClick }) => {
     <>
       <style>{`
         @keyframes menuTextShimmer {
-          0%   { background-position: -200% center; }
-          100% { background-position: 200% center; }
+          0% {
+            background-position: -200% center;
+          }
+          100% {
+            background-position: 200% center;
+          }
         }
+
         .m-glow-title {
           background: linear-gradient(
             90deg,
@@ -63,45 +88,80 @@ const Menu = ({ addToCart, onCardClick }) => {
         }
       `}</style>
 
-     <section className="mt-10 mb-16 px-4 md:px-6">
-  
-  <div className="text-center">
-    <h1 className="m-glow-title text-4xl md:text-5xl font-rocksalt font-bold">
-      Daftar Reseller
-    </h1>
-  </div>
+      <section className="mt-6 mb-16 px-4 md:px-6">
 
-  <h2 className="text-base md:text-lg font-londrina font-bold tracking-wider text-white text-center mt-4 mb-6">
-    Silahkan cari sesuai nama asli & grup
-  </h2>
+        {/* PENGUMUMAN - SELALU TERLIHAT */}
+        <div className="mx-auto mb-6 w-full max-w-4xl">
+          <div className="flex items-start gap-2 rounded-lg border border-pink-200/50 bg-pink-100/10 px-3 py-2.5 sm:items-center sm:px-4">
+            <IoInformationCircleOutline
+              className="mt-0.5 h-5 w-5 shrink-0 text-pink-300 sm:mt-0"
+              aria-hidden="true"
+            />
 
-  <div className="flex justify-center w-full max-w-xl mx-auto mb-6">
-    <div className="relative w-full flex rounded-xl overflow-hidden border-2 border-white/30 focus-within:border-amber-400 transition-colors duration-300">
-      <div className="flex items-center pl-4 text-white/50">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-      </div>
-      
-      <input
-        type="text"
-        className="w-full bg-white/10 placeholder:text-white/60 py-3 pl-3 pr-4 text-white font-medium focus:outline-none"
-        placeholder="Ketik nama reseller di sini..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+            <p className="text-xs leading-relaxed text-white/90 sm:text-sm">
+              <span className="font-bold text-amber-300">
+                Informasi Reseller:
+              </span>{" "}
+              Jika nama tidak ditemukan, silakan hubungi Admin
+              Ratu Paket Lebaran untuk verifikasi.
+            </p>
+          </div>
+        </div>
 
-      <button 
-        className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 md:px-8 whitespace-nowrap transition-colors duration-300"
-      >
-        Cari
-      </button>
-    </div>
-  </div>
+        {/* JUDUL */}
+        <div className="text-center">
+          <h1 className="m-glow-title text-4xl md:text-5xl font-rocksalt font-bold">
+            Daftar Reseller
+          </h1>
+        </div>
+
+        <h2 className="text-base md:text-lg font-londrina font-bold tracking-wider text-white text-center mt-4 mb-6">
+          Silahkan cari sesuai nama asli & grup
+        </h2>
+
+        {/* PENCARIAN */}
+        <div className="flex justify-center w-full max-w-xl mx-auto mb-6">
+          <div className="relative w-full flex rounded-xl overflow-hidden border-2 border-white/30 focus-within:border-amber-400 transition-colors duration-300">
+            <div className="flex items-center pl-4 text-white/50">
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+
+            <input
+              type="text"
+              className="w-full bg-white/10 placeholder:text-white/60 py-3 pl-3 pr-4 text-white font-medium focus:outline-none"
+              placeholder="Ketik nama reseller di sini..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+
+            <button
+              type="button"
+              onClick={() => setSearchTerm("")}
+              className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 md:px-8 whitespace-nowrap transition-colors duration-300"
+            >
+              {searchTerm ? "Reset" : "Cari"}
+            </button>
+          </div>
+        </div>
+
+        {/* KATEGORI AGEN */}
         <div className="w-full mb-8">
           <div className="flex flex-wrap justify-center gap-2 md:gap-2.5">
             {categories.map((category) => (
               <button
+                type="button"
                 key={category}
                 onClick={() => {
                   setSelectedCategory(category);
@@ -119,27 +179,52 @@ const Menu = ({ addToCart, onCardClick }) => {
           </div>
         </div>
 
-        {/* PERHATIKAN BAGIAN INI: SAYA TAMBAHKAN key={selectedCategory} */}
-        <div key={selectedCategory} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 tablet:grid-cols-5 lg:grid-cols-6 gap-4 mt-2">
+        {/* DAFTAR RESELLER */}
+        <div
+          key={selectedCategory}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 tablet:grid-cols-5 lg:grid-cols-6 gap-4 mt-2"
+        >
           {searchedMenuList.length > 0 ? (
             searchedMenuList.map((menu, index) => (
-              <Card 
+              <Card
                 key={menu?.id || `menu-${index}-${menu?.title}`}
                 onClick={() => handleCardClick(menu)}
               >
-                <Card.Top image={menu?.image} title={menu?.title} desc={menu?.desc} />
+                <Card.Top
+                  image={menu?.image}
+                  title={menu?.title}
+                  desc={menu?.desc}
+                />
                 <Card.Bottom price={menu?.price} />
               </Card>
             ))
           ) : (
             <div className="col-span-full flex flex-col items-center justify-center py-20">
-              <svg className="w-16 h-16 text-white/20 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <svg
+                className="w-16 h-16 text-white/20 mb-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
               </svg>
-              <p className="text-xl font-londrina text-white/40 tracking-wider">
+
+              <p className="text-xl font-londrina text-white/60 tracking-wider text-center">
                 Nama tidak ditemukan di grup ini.
               </p>
-              <button 
+
+              <p className="mt-2 text-sm text-white/50 text-center">
+                Silakan hubungi Admin Ratu Paket Lebaran
+                untuk verifikasi.
+              </p>
+
+              <button
+                type="button"
                 onClick={() => setSearchTerm("")}
                 className="mt-4 text-amber-400 font-bold hover:underline"
               >
@@ -149,6 +234,7 @@ const Menu = ({ addToCart, onCardClick }) => {
           )}
         </div>
 
+        {/* MODAL DETAIL RESELLER */}
         <AnimatePresence>
           {showModal && selectedMenu && (
             <Modal
