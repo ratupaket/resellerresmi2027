@@ -25202,6 +25202,22 @@ export const menuList = [
       price: "TELUKJAMBE BARAT KARAWANG",
       category: "Agen Ayu",
     },
+   {
+      id: 3125,
+      image: "/images/user2.png",
+      title:"Tarya Hermawan",
+      desc: "Reseller Sub Agen 1 Fridawaty Sub agen 2 Imas",
+      price: "Campaka Purwakarta",
+      category: "Agen Efi Nurlatifah",
+    },
+  {
+      id: 3126,
+      image: "/images/user2.png",
+      title:"Darsih",
+      desc: "Reseller Sub Agen 1 Fridawaty Sub agen 2 Imas",
+      price: "Cibatu Purwakarta",
+      category: "Agen Efi Nurlatifah",
+    },
        
        
        
