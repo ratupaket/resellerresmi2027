@@ -25194,6 +25194,14 @@ export const menuList = [
       price: "BANYUSARI KARAWANG",
       category: "Agen Ayu",
     },
+  {
+      id: 3124,
+      image: "/images/user2.png",
+      title:"PUJIYAH",
+      desc: "Reseller Sub Agen 1 ANIROH Sub agen 2 EEN NURAENI",
+      price: "TELUKJAMBE BARAT KARAWANG",
+      category: "Agen Ayu",
+    },
        
        
        
