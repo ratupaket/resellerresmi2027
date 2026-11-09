@@ -25570,7 +25570,7 @@ export const menuList = [
       category: "Non Agen",
     },
   {
-      id: 31872,
+      id: 3172,
       image: "/images/user2.png",
       title:"YULIANTI PRATIWI",
       desc: "Reseller Sub Agen 1 VIKA FAJAR INDAH LESTARI Sub Agen 2 JAJANG",
@@ -25670,7 +25670,7 @@ export const menuList = [
       image: "/images/user2.png",
       title:"HABIBATUL FAUZIYAH",
       desc: "Reseller Sub Agen 1 VIKA FAJAR INDAH LESTARI Sub Agen 2 HABIBATUL FAUZIYAH",
-      price: "CITALANG PURWAKARTA,
+      price: "CITALANG PURWAKARTA",
       category: "Non Agen",
     },
   {
@@ -25678,7 +25678,7 @@ export const menuList = [
       image: "/images/user2.png",
       title:"MUSTIKA PERTIWI",
       desc: "Reseller Sub Agen 1 VIKA FAJAR INDAH LESTARI Sub Agen 2 HABIBATUL FAUZIYAH",
-      price: "CAMPAKA PURWAKARTA,
+      price: "CAMPAKA PURWAKARTA",
       category: "Non Agen",
     },
   {
@@ -25686,7 +25686,7 @@ export const menuList = [
       image: "/images/user2.png",
       title:"PUSPA WULAN PURNAWATI",
       desc: "Reseller Sub Agen 1 VIKA FAJAR INDAH LESTARI Sub Agen 2 HABIBATUL FAUZIYAH",
-      price: "MUNJULJAYA PURWAKARTA,
+      price: "MUNJULJAYA PURWAKARTA",
       category: "Non Agen",
     },
   {
@@ -25694,7 +25694,7 @@ export const menuList = [
       image: "/images/user2.png",
       title:"SUPRIADI PRATOMO",
       desc: "Reseller Sub Agen 1 VIKA FAJAR INDAH LESTARI Sub Agen 2 HABIBATUL FAUZIYAH",
-      price: "CITALANG PURWAKARTA,
+      price: "CITALANG PURWAKARTA",
       category: "Non Agen",
     },
   
