@@ -25267,14 +25267,6 @@ export const menuList = [
       category: "Non Agen",
     },
     {
-      id: 3134,
-      image: "/images/user2.png",
-      title:"SITI DJUBAEDAH",
-      desc: "Reseller Sub Agen 1 VIKA FAJAR INDAH LESTARI",
-      price: "MUNJULJAYA PURWAKARTA",
-      category: "Non Agen",
-    },
-    {
       id: 3135,
       image: "/images/user2.png",
       title:"SITI DJUBAEDAH",
@@ -25383,7 +25375,7 @@ export const menuList = [
       image: "/images/user2.png",
       title:"RINNI FEBRIYANI",
       desc: "Reseller Sub Agen 1 VIKA FAJAR INDAH LESTARI Sub Agen 2 RINNI FEBRIYANI",
-      price: "MUNJULJAYA PURWAKARTA",
+      price: "CIBITUNG CIKARANG",
       category: "Non Agen",
     },
     {
