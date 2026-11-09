@@ -1,3 +1,4 @@
+
 import React from "react";
 import { IoClose } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
@@ -88,8 +89,8 @@ const Modal = ({ show, onClose, menu }) => {
             <p className="text-base font-medium mb-3">{menu.desc1}</p>
           )}
 
-          {/* Nomor HP/WhatsApp */}
-          {menu.phone ? (
+          {/* Nomor HP/WhatsApp hanya jika tersedia */}
+          {menu.phone && (
             <>
               <div className="bg-white/20 rounded-lg p-3 mb-4">
                 <p className="text-sm mb-1">Nomor HP / WhatsApp</p>
@@ -104,11 +105,6 @@ const Modal = ({ show, onClose, menu }) => {
                 Hubungi via WhatsApp
               </button>
             </>
-          ) : (
-            <p className="text-sm bg-white/20 rounded-lg p-3">
-              Nomor HP/WhatsApp belum tersedia. Silakan hubungi Admin Ratu
-              Paket Lebaran.
-            </p>
           )}
         </div>
       </motion.div>
